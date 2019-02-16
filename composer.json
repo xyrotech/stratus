@@ -1,0 +1,19 @@
+{
+    "name": "xyrotech/stratus",
+    "description": "Self-hosted cloud sharing platform",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Xyrotech",
+            "email": "info@xyrotech.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Xyrotech\\Stratus\\": "src/"
+        }
+    }
+}
