@@ -1,5 +1,7 @@
 <?php
 
-Route::get('stratus', function(){
-    return view('stratus::stratus');
+Route::group(['namespace' => 'Xyrotech\Stratus\Http\Controllers'],function(){
+    Route::get('stratus', 'SetupController@index');
 });
+
+

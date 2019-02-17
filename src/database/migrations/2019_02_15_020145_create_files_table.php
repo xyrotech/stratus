@@ -11,7 +11,7 @@ class CreateFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('files', function (Blueprint $table){
+        Schema::create('stratus_files', function (Blueprint $table){
             // Mariadb unique hack
             $table->engine='innodb ROW_FORMAT=DYNAMIC';
             // Columns
@@ -36,6 +36,6 @@ class CreateFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('stratus_files');
     }
 }
