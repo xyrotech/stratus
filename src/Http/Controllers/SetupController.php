@@ -19,7 +19,7 @@ class SetupController extends Controller
                 return view('stratus::setup');
             }
         }catch (QueryException $exception){
-            return "Unable to connect to database, please check credentials in your .env file";
+            return view('stratus::setup');
         }
 
 

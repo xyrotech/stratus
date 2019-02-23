@@ -14,8 +14,11 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('/vendor/xyrotech/css/sky.css') }}" rel="stylesheet ">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{{ asset('vendor/xyrotech/css/sky.css') }}" rel="stylesheet ">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css" />
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,46 +36,46 @@
 
 <body >
 @if(Auth::check())
-<!-- Navigation -->
-<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-<nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand">
-            Stratus
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none"  data-toggle="modal" data-target="#modal-0" onclick="sharing(0); return false;">
-                <i class="fa fa-lg fa-folder-o" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
-                Share My Folder
-            </a>
-        </li>
-        @can('admin-access')
-        <li>
-            <a href="/admin" >
-                <i class="fa fa-lg fa-database" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
-                Administrator Panel
-            </a>
-        </li>
-        @endcan
-        <li>
-            <a href="#" style="text-decoration: none"  data-toggle="modal" data-target="#modal-options" >
-                <i class="fa fa-lg fa-cog" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
-                Options
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="fa fa-lg fa-sign-out" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
-                Logout
-            </a>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                Stratus
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none"  data-toggle="modal" data-target="#modal-0" onclick="sharing(0); return false;">
+                    <i class="fa fa-lg fa-folder-o" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
+                    Share My Folder
+                </a>
+            </li>
+            @can('admin-access')
+                <li>
+                    <a href="/admin" >
+                        <i class="fa fa-lg fa-database" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
+                        Administrator Panel
+                    </a>
+                </li>
+            @endcan
+            <li>
+                <a href="#" style="text-decoration: none"  data-toggle="modal" data-target="#modal-options" >
+                    <i class="fa fa-lg fa-cog" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
+                    Options
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fa fa-lg fa-sign-out" aria-hidden="true" style="margin-left:-17px; padding-right:10px"></i>
+                    Logout
+                </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        </li>
-    </ul>
-</nav>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </li>
+        </ul>
+    </nav>
 @endif
 
 <!-- Header -->
@@ -83,10 +86,14 @@
 </header>
 
 <!-- jQuery -->
-<script src="{{ asset('js/sun.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.min.js"></script>
+<script src="{{ asset('vendor/xyrotech/js/sun.js') }}"></script>
 
 @yield('custom_scripts')
 
