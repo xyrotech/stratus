@@ -243,3 +243,274 @@ footer {
   bottom: 5px;
   right: 5px;
 }
+
+.login-form{
+    width: 400px;
+}
+
+.logo {
+    border-radius: 5px 5px 0px 0px;
+    background-color: #337ab7;
+    height: 128px;
+    margin: -20px -20px 20px;
+}
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+}
+
+.login-block .input-group{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #2e6da4;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+a:focus {
+    outline: none;
+}
+.trash{
+    padding: 10px;
+    border-radius: 5px;
+}
+.trash:hover, .trash:focus{
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.trash:active{
+    background-color: rgba(46, 109, 164, 0.24);
+}
+.tiddle{
+    vertical-align: middle;
+}
+.option-icons{
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+@font-face {
+    font-family: 'Softline';
+    src: url('/fonts/softline-webfont.eot');
+    src: url('/fonts/softline-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/softline-webfont.woff2') format('woff2'),
+    url('/fonts/softline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: Geosans;
+    src: url('/fonts/GeosansLight.ttf');
+}
+
+
+.dropdown-menu-right::before {
+    position: absolute;
+    top: -7px;
+    right: 9px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #CCC;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+
+.dropdown-menu-right::after {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    border-left: 6px solid transparent;
+    content: '';
+}
+
+.dropdown-menu-left::before {
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #CCC;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+
+.dropdown-menu-left::after {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    border-left: 6px solid transparent;
+    content: '';
+}
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.cmn-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+.cmn-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+input.cmn-toggle-round + label {
+    padding: 2px;
+    width: 70px;
+    height: 35px;
+    background-color: #dddddd;
+    border-radius: 60px;
+}
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+}
+input.cmn-toggle-round + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: background 0.4s;
+}
+input.cmn-toggle-round + label:after {
+    width: 33px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+}
+input.cmn-toggle-round:checked + label:before {
+    background-color: #8ce196;
+}
+input.cmn-toggle-round:checked + label:after {
+    margin-left: 35px;
+}
+input.cmn-toggle-yes-no + label {
+    padding: 2px;
+    width: 80px;
+    height: 30px;
+}
+input.cmn-toggle-yes-no + label:before,
+input.cmn-toggle-yes-no + label:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+input.cmn-toggle-yes-no + label:before {
+    background-color: #dddddd;
+    content: attr(data-off);
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+input.cmn-toggle-yes-no + label:after {
+    background-color: #428bca;
+    content: attr(data-on);
+    transition: transform 0.5s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+input.cmn-toggle-yes-no:checked + label:before {
+    transform: rotateY(180deg);
+}
+input.cmn-toggle-yes-no:checked + label:after {
+    transform: rotateY(0);
+}
+.file-prop{
+    clear: both;
+    padding: 15px 0px;
+}
+
+.switch{
+    margin-top:2px;
+}
+
+.control-label{
+    padding-top: 6px;
+}
+
+.rocket{
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+}

@@ -14,7 +14,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/sky.css') }}" rel="stylesheet ">
+    <link href="{{ asset('/vendor/xyrotech/css/sky.css') }}" rel="stylesheet ">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.min.css">
 
     <!-- Custom Fonts -->
