@@ -11,7 +11,7 @@ class CreateUserOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_options', function (Blueprint $table){
+        Schema::create('stratus_user_options', function (Blueprint $table){
             // Mariadb unique hack
             $table->engine='innodb ROW_FORMAT=DYNAMIC';
             // Columns
@@ -32,6 +32,6 @@ class CreateUserOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_options');
+        Schema::dropIfExists('stratus_user_options');
     }
 }

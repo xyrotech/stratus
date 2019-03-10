@@ -26,7 +26,7 @@ class CreateFilesTable extends Migration
             $table->softDeletes();
             // Constraints
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('folder_id')->references('id')->on('folders');
+            $table->foreign('folder_id')->references('id')->on('stratus_folders');
         });
     }
     /**

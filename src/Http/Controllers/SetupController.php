@@ -13,13 +13,14 @@ class SetupController extends Controller
     public function index(){
 
         try{
-            if(Schema::hasTable('stratus_files')){
-                return view('stratus::login');
-            } else {
-                return view('stratus::setup');
-            }
-        }catch (QueryException $exception){
+            Schema::hasTable('stratus_files');
             return view('stratus::setup');
+        }catch (QueryException $exception){
+            return view('stratus::setup', [
+                    'errors' => [
+                        'database' => $exception->getMessage()
+                    ]
+            ]);
         }
 
 

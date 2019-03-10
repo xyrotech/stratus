@@ -11,7 +11,7 @@ class CreateTransfersTable extends Migration
      */
     public function up()
     {
-        Schema::create('transfers', function (Blueprint $table){
+        Schema::create('stratus_transfers', function (Blueprint $table){
             // Mariadb unique hack
             $table->engine='innodb ROW_FORMAT=DYNAMIC';
             // Columns
@@ -29,6 +29,6 @@ class CreateTransfersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transfers');
+        Schema::dropIfExists('stratus_transfers');
     }
 }

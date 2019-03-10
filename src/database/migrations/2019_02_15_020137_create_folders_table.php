@@ -11,7 +11,7 @@ class CreateFoldersTable extends Migration
      */
     public function up()
     {
-        Schema::create('folders', function (Blueprint $table){
+        Schema::create('stratus_folders', function (Blueprint $table){
             // Mariadb unique hack
             $table->engine='innodb ROW_FORMAT=DYNAMIC';
             // Columns
@@ -33,6 +33,6 @@ class CreateFoldersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('folders');
+        Schema::dropIfExists('stratus_folders');
     }
 }

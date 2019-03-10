@@ -11,7 +11,7 @@ class CreateClamavTable extends Migration
      */
     public function up()
     {
-        Schema::create('clamav', function (Blueprint $table){
+        Schema::create('stratus_clamav', function (Blueprint $table){
             // Columns
             $table->increments('id');
             $table->timestamps();
@@ -19,7 +19,7 @@ class CreateClamavTable extends Migration
             $table->ipAddress('remote_addr');
             $table->integer('folder_id')->unsigned()->nullable();
             // Constraints
-            $table->foreign('folder_id')->references('id')->on('folders');
+            $table->foreign('folder_id')->references('id')->on('stratus_folders');
         });
     }
     /**
@@ -29,6 +29,6 @@ class CreateClamavTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clamav');
+        Schema::dropIfExists('stratus_clamav');
     }
 }
